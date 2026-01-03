@@ -40,8 +40,8 @@ class GooglePage {
 
     async clickNext()
     {
-        const btn = await this.driver.findElement(this.nextButton);
-        await btn.click();
+        const el = await this.getSearchBoxElement();
+        await el.sendKeys('\n');
     }
 
     async getTitle() {
