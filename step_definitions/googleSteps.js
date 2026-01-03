@@ -1,7 +1,7 @@
 const { Builder } = require('selenium-webdriver');
 require('chromedriver');
 const { setDefaultTimeout, Before, After, Given, When, Then } = require('@cucumber/cucumber');
-const GoogleActions = require('../../actions/googleActions');
+const GoogleActions = require('../actions/googleActions');
 
 setDefaultTimeout(20000); // Increase timeout to 20 seconds
 
