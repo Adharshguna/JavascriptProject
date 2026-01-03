@@ -6,7 +6,12 @@ const GoogleActions = require('../../actions/googleActions');
 setDefaultTimeout(20000); // Increase timeout to 20 seconds
 
 Before(async function () {
-    this.driver = await new Builder().forBrowser('chrome').build();
+    const chrome = require('selenium-webdriver/chrome');
+    const chromeOptions = new chrome.Options();
+    if (process.env.CI || process.env.GITHUB_ACTIONS) {
+        chromeOptions.addArguments('--headless=new', '--no-sandbox', '--disable-dev-shm-usage');
+    }
+    this.driver = await new Builder().forBrowser('chrome').setChromeOptions(chromeOptions).build();
     this.googleActions = new GoogleActions(this.driver);
 });
 
