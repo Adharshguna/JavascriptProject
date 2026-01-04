@@ -1,11 +1,9 @@
 // pages/googlePage.js
 const { By, until } = require('selenium-webdriver');
-const Utils = require('../Utils/utils');
 
 class GooglePage {
     constructor(driver) {
         this.driver = driver;
-        this.utils = new Utils(this.driver);
         this.url = 'https://www.gmail.com';
         this.searchBox = By.name('identifier');
         this.nextButton = By.xpath("//span[text()='Next']");
@@ -42,8 +40,8 @@ class GooglePage {
 
     async clickNext()
     {
-        const el = await this.utils.waitForLocator(this.nextButton);
-        await el.click();
+        const el = await this.getSearchBoxElement();
+        await el.sendKeys('\n');
     }
 
     async getTitle() {
