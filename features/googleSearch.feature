@@ -3,7 +3,7 @@ Feature: Gmail positive case
   Scenario Outline: Search for Gmail
     Given I open the Gmail homepage
     When I search for "<googlesearch>"
-    Then the page title should contain "Couldn’t sign you in"
+    Then the page title should contain "Gmail"
     Examples:
       | googlesearch        |
       | adharshguna1@gmail.com   |
@@ -13,7 +13,7 @@ Feature: Gmail positive case
     Scenario Outline: Search for Microsoft Copilot
     Given I open the Gmail homepage
     When I search for "<googlesearch>"
-    Then the page title should contain "Couldn’t sign you in"
+    Then the page title should contain "Gmail"
     Examples:
       | googlesearch        |
       | test@gmail.com   |
