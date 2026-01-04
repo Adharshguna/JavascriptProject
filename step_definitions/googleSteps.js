@@ -15,9 +15,16 @@ Before(async function () {
     this.googleActions = new GoogleActions(this.driver);
 });
 
-After(async function () {
-    if (this.driver) {
-        await this.driver.quit();
+After(async function (scenario) {
+    try {
+        if (scenario.result && scenario.result.status === 'FAILED' && this.driver) {
+            const image = await this.driver.takeScreenshot();
+            await this.attach(image, 'image/png');
+        }
+    } finally {
+        if (this.driver) {
+            await this.driver.quit();
+        }
     }
 });
 

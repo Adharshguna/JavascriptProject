@@ -1,0 +1,145 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "gmail-positive-case;search-for-gmail",
+        "keyword": "Scenario Outline",
+        "line": 9,
+        "name": "Search for Gmail",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2259664700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I open the Gmail homepage",
+            "match": {
+              "location": "step_definitions\\googleSteps.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3267416799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I search for \"adharshguna1@gmail.com\"",
+            "match": {
+              "location": "step_definitions\\googleSteps.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 550859600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "the page title should contain \"Gmail\"",
+            "match": {
+              "location": "step_definitions\\googleSteps.js:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 43257499
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 222491800
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "gmail-positive-case;search-for-microsoft-copilot",
+        "keyword": "Scenario Outline",
+        "line": 19,
+        "name": "Search for Microsoft Copilot",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 687154000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "I open the Gmail homepage",
+            "match": {
+              "location": "step_definitions\\googleSteps.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3203826900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I search for \"test@gmail.com\"",
+            "match": {
+              "location": "step_definitions\\googleSteps.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 506085399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "the page title should contain \"Gmail\"",
+            "match": {
+              "location": "step_definitions\\googleSteps.js:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25172099
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 92079500
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "gmail-positive-case",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Gmail positive case",
+    "tags": [],
+    "uri": "features\\googleSearch.feature"
+  }
+]

@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js"
+    "test": "cucumber-js",
+    "test:report": "cucumber-js --format json:reports/cucumber_report.json && npm run generate-report",
+    "generate-extent-report": "node scripts/generate-extent-report.js",
+    "generate-report": "node scripts/generate-report.js"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +19,8 @@
   "devDependencies": {
     "@cucumber/cucumber": "^12.5.0",
     "chai": "^6.2.2",
-    "chromedriver": "^143.0.3"
+    "chromedriver": "^143.0.3",
+    "cucumber-html-reporter": "^5.5.0",
+    "multiple-cucumber-html-reporter": "^1.16.0"
   }
 }
